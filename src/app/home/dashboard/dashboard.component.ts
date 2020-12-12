@@ -18,6 +18,16 @@ export class DashboardComponent {
   public unitFormGroup: FormGroup;
 
   public products = PRODUCTS;
+  public total = {
+    totale: 0,
+    per_pezzo: 0,
+    ricerca: 0,
+    prototipia: 0,
+    tessuto_a_pezzo: 0,
+    maniffattura: 0,
+    totale_tessauto: 0,
+    totale_minuteria: 0
+  }
 
   private destroy$ = new Subject<boolean>();
 
@@ -102,30 +112,71 @@ export class DashboardComponent {
     this.setTotalValue();
   }
 
-  private setTotalValue() {
+  public calculateTotal(): void {
+    this.calculateCostoRicerca();
+    this.calculateProtopia();
+  }
+
+  private calculateProtopia(): void {
+    if(this.accessoriesFormGroup.controls['baseCostForPrototype'].value) {
+      this.total.prototipia = this.total.prototipia + this.accessoriesFormGroup.controls['baseCostForPrototype'].value;
+    }
+
+    if(this.accessoriesFormGroup.controls['accessories'].value) {
+      this.total.prototipia = this.total.prototipia + this.accessoriesFormGroup.controls['accessories'].value;
+    }
+
+    if(this.accessoriesFormGroup.controls['others'].value) {
+      this.total.prototipia = this.total.prototipia + this.accessoriesFormGroup.controls['others'].value;
+    }
+  }
+
+  private calculateCostoRicerca(): void {
+    if(this.secondFormGroup.controls['designerPrincipal_total'].value) {
+      this.total.ricerca = this.total.ricerca + this.secondFormGroup.controls['designerPrincipal_total'].value;
+    }
+
+    if(this.secondFormGroup.controls['designerSenior_total'].value) {
+      this.total.ricerca = this.total.ricerca + this.secondFormGroup.controls['designerSenior_total'].value;
+    }
+
+    if(this.secondFormGroup.controls['designer_total'].value) {
+      this.total.ricerca = this.total.ricerca + this.secondFormGroup.controls['designer_total'].value;
+    }
+
+    if(this.secondFormGroup.controls['designerJunior_total'].value) {
+      this.total.ricerca = this.total.ricerca + this.secondFormGroup.controls['designerJunior_total'].value;
+    }
+
+    if(this.secondFormGroup.controls['designerStage_total'].value) {
+      this.total.ricerca = this.total.ricerca + this.secondFormGroup.controls['designerStage_total'].value;
+    }
+  }
+
+  private setTotalValue(): void {
     this.secondFormGroup.valueChanges.pipe(takeUntil(this.destroy$)).subscribe(value => {
       if (value['designerPrincipal_rate'] && value['designerPrincipal_hours']) {
-        const total = +value['designerPrincipal_rate'] * +value['designerPrincipal_hours']
+        const total = value['designerPrincipal_rate'] * value['designerPrincipal_hours']
         this.secondFormGroup.controls['designerPrincipal_total'].setValue(total, { emitEvent: false });
       }
 
       if (value['designerSenior_rate'] && value['designerSenior_hours']) {
-        const total = +value['designerSenior_rate'] * +value['designerSenior_hours']
+        const total = value['designerSenior_rate'] * value['designerSenior_hours']
         this.secondFormGroup.controls['designerSenior_total'].setValue(total, { emitEvent: false });
       }
 
       if (value['designer_rate'] && value['designer_hours']) {
-        const total = +value['designer_rate'] * +value['designer_hours']
+        const total = value['designer_rate'] * value['designer_hours']
         this.secondFormGroup.controls['designer_total'].setValue(total, { emitEvent: false });
       }
 
       if (value['designerJunior_rate'] && value['designerJunior_hours']) {
-        const total = +value['designerJunior_rate'] * +value['designerJunior_hours']
+        const total = value['designerJunior_rate'] * value['designerJunior_hours']
         this.secondFormGroup.controls['designerJunior_total'].setValue(total, { emitEvent: false });
       }
 
       if (value['designerStage_rate'] && value['designerStage_hours']) {
-        const total = +value['designerStage_rate'] * +value['designerStage_hours']
+        const total = value['designerStage_rate'] * value['designerStage_hours']
         this.secondFormGroup.controls['designerStage_total'].setValue(total, { emitEvent: false });
       }
 
