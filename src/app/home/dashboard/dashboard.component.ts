@@ -26,6 +26,7 @@ export class DashboardComponent {
     ricerca: 0,
     prototipia: 0,
     tessuto_a_pezzo: 0,
+    minuteria_a_pezzo: 0,
     maniffattura: 0,
     totale_tessauto: 0,
     totale_minuteria: 0
@@ -117,6 +118,7 @@ export class DashboardComponent {
   public calculateTotal(): void {
     this.calculateCostoRicerca();
     this.calculateProtopia();
+    console.log(this.total);
   }
 
   public redirect(): void {

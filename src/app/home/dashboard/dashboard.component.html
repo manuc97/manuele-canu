@@ -513,11 +513,21 @@
     </mat-step>
     <mat-step>
         <ng-template matStepLabel>Total</ng-template>
-        <div></div>
+        <div>Costo totale {{total.totale}}</div>
+        <div>Costo per pezzo {{total.per_pezzo}}</div>
+        <div>Costo ricerca {{total.ricerca}}</div>
+        <div>Protopia {{total.prototipia}}</div>
+        <div>Costo tessuto a pezzo {{total.tessuto_a_pezzo}}</div>
+        <div>Costo minuteria a pezzo {{total.minuteria_a_pezzo}}</div>
+        <div>Costo manifattura {{total.maniffattura}}</div>
+        <div>Totale tessuto {{total.totale_tessauto}}</div>
+        <div>Totale minuteria {{total.totale_minuteria}}</div>
         <div>
-            <button mat-button
-            (click)="redirect()"
-            >Done</button>
+            <button
+                mat-button
+                (click)="redirect()">
+                Done
+            </button>
             <button
                 mat-button
                 (click)="stepper.reset()">
