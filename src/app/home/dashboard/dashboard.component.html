@@ -376,7 +376,114 @@
                         class="form-control">
                 </mat-form-field>
             </div>
+            <div>
+                <button
+                    mat-button
+                    matStepperPrevious>
+                    Back
+                </button>
+                <button
+                    mat-button
+                    matStepperNext>
+                    Next
+                </button>
+            </div>
         </form>
+    </mat-step>
+    <mat-step [stepControl]="smallPartsFormGroup">
+        <form [formGroup]="smallPartsFormGroup">
+            <ng-template matStepLabel>Choose small extra items</ng-template>
+            <div>
+                <span>Bottoni</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>per unit</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="buttons_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="buttons_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Fibbie</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>per unit</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="buckles_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="buckles_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Zip</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>per unit</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="zip_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="zip_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Stress/pietre</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>per unit</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="stones_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="stones_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <button
+                    mat-button
+                    matStepperPrevious>
+                    Back
+                </button>
+                <button
+                    mat-button
+                    matStepperNext>
+                    Next
+                </button>
+            </div>
+        </form>
+
+
     </mat-step>
     <mat-step>
         <ng-template matStepLabel>Done</ng-template>

@@ -12,6 +12,7 @@ export class DashboardComponent {
   public secondFormGroup: FormGroup;
   public accessoriesFormGroup: FormGroup;
   public fabricFormGroup: FormGroup;
+  public smallPartsFormGroup: FormGroup;
 
   public products = PRODUCTS;
 
@@ -73,6 +74,20 @@ export class DashboardComponent {
       exoticLeather_unit: [''],
       exoticLeather_price: ['']
 
+    });
+
+    this.smallPartsFormGroup = this.formBuilder.group({
+      buttons_unit:[''],
+      buttons_price: [''],
+
+      buckles_unit:[''],
+      buckles_price:[''],
+
+      zip_unit:[''],
+      zip_price:[''],
+
+      stones_unit:[''],
+      stones_price:['']
     });
   }
 }
