@@ -1,11 +1,15 @@
-<div class="auth-container">
+<div class="auth-container slide-{{slide}}">
     <div class="centered-panel">
-        <div class="title">Manuele-Canu</div>
+        <h1 class="title">Manuele-Canu</h1>
+        <h2 class="subtitle">
+            <span>Sign-In</span>
+            <span class="material-icons">lock</span>
+        </h2>
         <div class="form-wrapper">
             <form [formGroup]="loginForm">
                 <div class="form-group">
-                    <mat-form-field appearance="fill">
-                        <mat-label>Username</mat-label>
+                    <mat-form-field>
+                        <mat-label>Username*</mat-label>
                         <input
                             matInput
                             type="text"
@@ -14,8 +18,8 @@
                     </mat-form-field>
                 </div>
                 <div class="form-group">
-                    <mat-form-field appearance="fill">
-                        <mat-label>Password</mat-label>
+                    <mat-form-field>
+                        <mat-label>Password*</mat-label>
                         <input
                             matInput
                             type="password"

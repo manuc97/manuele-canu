@@ -1,24 +1,39 @@
 .auth-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     width: 100%;
     height: 100%;
-    background-color: #2779BD;;
+    background: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &.slide-0 {
+        background-image: url(https://wallpaperaccess.com/full/714374.jpg);
+    }
+
+    &.slide-1 {
+        background-image: url(https://i.pinimg.com/originals/fc/8d/09/fc8d09c86a828c419dc611ef2b9b5cb3.jpg);
+    }
+
+    &.slide-2 {
+        background-image: url(https://cutewallpaper.org/21/aesthetic-landscape-tumblr/Landscape-Aesthetic-Sunset-Wallpaper-Skushi.jpg);
+    }
 
     .centered-panel {
         display: flex;
         flex-direction: column;
         padding: 10px 20px;
-        width: 395px;
-        height: 360px;
-        background: #ffffff;
+        max-width: 550px;
+        width: 100%;
+        height: 100%;
+        background: #424242;
         box-shadow: 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+        box-sizing: border-box;
 
         .form-wrapper {
             width: 100%;
-            margin: auto;
+            margin: 20px auto auto;
         }
     }
 
@@ -47,11 +62,60 @@
     color: #2779BD;
     text-align: center;
     padding: 5px;
-    margin-top: 20px;
+    margin: 20px 0 0;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.subtitle {
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+
+    .material-icons {
+        color: #fff;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: inline-block;
+        vertical-align: middle;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 15px;
+        margin-left: 5px;
+        cursor: default;
+    }
 }
 
 button {
     width: 100%;
     color: #ffffff;
     background: #2779BD;
+}
+
+input, mat-label {
+    color: #fff !important;
+    caret-color: #fff !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-text-fill-color: #fff !important;
+    -webkit-box-shadow: 0 0 0 1000px #424242 inset !important;
+}
+
+::ng-deep {
+    .mat-form-field-underline {
+        background-color: #fff !important;
+
+    }
+
+    .mat-form-field.mat-focused {
+        .mat-form-field-ripple {
+            background-color: #2779BD !important;
+        }
+
+    }
 }
