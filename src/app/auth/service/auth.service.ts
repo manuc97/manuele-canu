@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
-
-import { AUTH_ROUTES, MAIN_APP_ROUTES } from 'app/routes';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -10,7 +7,7 @@ export class AuthService {
     private loginStateSubject = new Subject<boolean>()
     public loginState = this.loginStateSubject.asObservable();
 
-    constructor(private router: Router) { }
+    constructor() { }
 
     public changeLoginState(value: boolean) {
         this.loginStateSubject.next(value);
@@ -25,6 +22,5 @@ export class AuthService {
         window.localStorage.setItem('userId', userId);
         this.changeLoginState(true);
     }
-
 
 }
