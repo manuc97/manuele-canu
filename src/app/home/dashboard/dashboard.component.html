@@ -28,7 +28,7 @@
         <form [formGroup]="secondFormGroup">
             <ng-template matStepLabel>Choose designer</ng-template>
             <div>
-                <div class="designer-field">
+                <div>
                     <div>Designer Principal</div>
                     <mat-form-field appearance="fill">
                         <mat-label>Rate</mat-label>
@@ -55,7 +55,7 @@
                             class="form-control">
                     </mat-form-field>
                 </div>
-                <div class="designer-field">
+                <div>
                     <div>Designer Senior</div>
                     <mat-form-field appearance="fill">
                         <mat-label>Rate</mat-label>
@@ -82,7 +82,7 @@
                             class="form-control">
                     </mat-form-field>
                 </div>
-                <div class="designer-field">
+                <div>
                     <div>Designer</div>
                     <mat-form-field appearance="fill">
                         <mat-label>Rate</mat-label>
@@ -109,7 +109,7 @@
                             class="form-control">
                     </mat-form-field>
                 </div>
-                <div class="designer-field">
+                <div>
                     <div>Designer Junior</div>
                     <mat-form-field appearance="fill">
                         <mat-label>Rate</mat-label>
@@ -136,7 +136,7 @@
                             class="form-control">
                     </mat-form-field>
                 </div>
-                <div class="designer-field">
+                <div>
                     <div>Designer Stage</div>
                     <mat-form-field appearance="fill">
                         <mat-label>Rate</mat-label>
@@ -225,6 +225,156 @@
                             class="form-control">
                     </mat-form-field>
                 </div>
+            </div>
+            <div>
+                <button
+                    mat-button
+                    matStepperPrevious>
+                    Back
+                </button>
+                <button
+                    mat-button
+                    matStepperNext>
+                    Next
+                </button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="fabricFormGroup">
+        <form [formGroup]="fabricFormGroup">
+            <ng-template matStepLabel>Choose fabric items</ng-template>
+            <div>
+                <span>Lana</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>m2 per unit</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="wool_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="wool_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Cashmire</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>m2 per unit</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="cashmire_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="cashmire_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Cotone</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>m2 per unit</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="cotton_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="cotton_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Viscosa</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>m2 per unit</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="viscose_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="viscose_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Ecopelle</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>m2 per unit</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="ecoLeather_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="ecoLeather_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Pelle</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>m2 per unit</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="leather_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="leather_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Pelle Esotica</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>m2 per unit</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="exoticLeather_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="exoticLeather_price"
+                        class="form-control">
+                </mat-form-field>
             </div>
         </form>
     </mat-step>

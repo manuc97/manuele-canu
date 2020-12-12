@@ -11,6 +11,7 @@ export class DashboardComponent {
   public firstFormGroup: FormGroup;
   public secondFormGroup: FormGroup;
   public accessoriesFormGroup: FormGroup;
+  public fabricFormGroup: FormGroup;
 
   public products = PRODUCTS;
 
@@ -47,6 +48,31 @@ export class DashboardComponent {
       baseCostForPrototype: [''],
       accessories: [''],
       others: ['']
+    });
+
+    this.fabricFormGroup = this.formBuilder.group({
+
+      wool_unit: [''],
+      wool_price: [''],
+
+      cashmire_unit: [''],
+      cashmire_price: [''],
+
+      cotton_unit: [''],
+      cotton_price: [''],
+
+      viscose_unit: [''],
+      viscose_price: [''],
+
+      ecoLeather_unit: [''],
+      ecoLeather_price: [''],
+
+      leather_unit: [''],
+      leather_price: [''],
+
+      exoticLeather_unit: [''],
+      exoticLeather_price: ['']
+
     });
   }
 }
