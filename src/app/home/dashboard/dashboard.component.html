@@ -1,0 +1,197 @@
+<mat-vertical-stepper
+    [linear]="true"
+    #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Choose a product</ng-template>
+            <mat-radio-group
+            class="products"
+                name="product_name"
+                formControlName="product">
+                <mat-radio-button
+                    *ngFor="let product of products"
+                    name="product"
+                    [value]="product.value">
+                    {{product.text}}
+                </mat-radio-button>
+            </mat-radio-group>
+            <div>
+                <button
+                    mat-button
+                    matStepperNext>
+                    Next
+                </button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Choose designer</ng-template>
+            <div>
+                <div class="designer-field">
+                    <div>Designer Principal</div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Rate</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="designerPrincipal_rate"
+                            class="form-control">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Hours</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="designerPrincipal_hours"
+                            class="form-control">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Total</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="designerPrincipal_total"
+                            class="form-control">
+                    </mat-form-field>
+                </div>
+                <div class="designer-field">
+                    <div>Designer Senior</div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Rate</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="designerSenior_rate"
+                            class="form-control">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Hours</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="designerSenior_hours"
+                            class="form-control">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Total</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="designerSenior_total"
+                            class="form-control">
+                    </mat-form-field>
+                </div>
+                <div class="designer-field">
+                    <div>Designer</div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Rate</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="designer_rate"
+                            class="form-control">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Hours</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="designer_hours"
+                            class="form-control">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Total</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="designer_total"
+                            class="form-control">
+                    </mat-form-field>
+                </div>
+                <div class="designer-field">
+                    <div>Designer Junior</div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Rate</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="designerJunior_rate"
+                            class="form-control">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Hours</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="designerJunior_hours"
+                            class="form-control">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Total</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="designerJunior_total"
+                            class="form-control">
+                    </mat-form-field>
+                </div>
+                <div class="designer-field">
+                    <div>Designer Stage</div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Rate</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="designerStage_rate"
+                            class="form-control">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Hours</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="designerStage_hours"
+                            class="form-control">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Total</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="designerStage_total"
+                            class="form-control">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div>
+                <button
+                    mat-button
+                    matStepperPrevious>
+                    Back
+                </button>
+                <button
+                    mat-button
+                    matStepperNext>
+                    Next
+                </button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+            <button
+                mat-button
+                matStepperPrevious>
+                Back
+            </button>
+            <button
+                mat-button
+                (click)="stepper.reset()">
+                Reset
+            </button>
+        </div>
+    </mat-step>
+</mat-vertical-stepper>
