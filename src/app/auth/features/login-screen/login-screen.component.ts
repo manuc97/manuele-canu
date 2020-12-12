@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { USERS } from './../../service/mock.data';
 import { AuthService } from './../../service/auth.service';
@@ -8,17 +8,20 @@ import { AuthService } from './../../service/auth.service';
     templateUrl: './login-screen.component.html',
     styleUrls: ['./login-screen.component.scss']
 })
-export class LoginScreenComponent {
+export class LoginScreenComponent implements OnInit {
     public loginForm: FormGroup;
 
     public loading = false;
     public submitted = false;
+    public slide: number;
 
     private mockUsers = USERS;
 
     constructor(private formBuilder: FormBuilder, private authService: AuthService) { }
 
     ngOnInit(): void {
+        this.slide = Math.floor(Math.random() * 3);
+
         this.loginForm = this.formBuilder.group({
             username: ['', Validators.required],
             password: ['', Validators.required]
