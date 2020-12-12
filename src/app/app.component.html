@@ -1,1 +1,14 @@
-sal
+<div *ngIf="isLoggedIn" class="main-container">
+    <mat-toolbar>
+        <div
+            class="topbar-container">
+            <div class="l-topbar">
+                <span>Manuele-Canu</span>
+            </div>
+        </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+</div>
+<div *ngIf="!isLoggedIn" class="main-container">
+    <router-outlet name="notLoggedIn"></router-outlet>
+</div>

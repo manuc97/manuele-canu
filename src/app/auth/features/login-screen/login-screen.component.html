@@ -1,0 +1,37 @@
+<div class="auth-container">
+    <div class="centered-panel">
+        <div class="title">Manuele-Canu</div>
+        <div class="form-wrapper">
+            <form [formGroup]="loginForm">
+                <div class="form-group">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Username</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="username"
+                            class="form-control">
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input
+                            matInput
+                            type="password"
+                            formControlName="password"
+                            class="form-control">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <button
+                        mat-raised-button
+                        type="button"
+                        (click)="onSubmit()">
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
