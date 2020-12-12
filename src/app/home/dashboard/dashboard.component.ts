@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import { PRODUCTS } from '../configs/products'
 @Component({
   selector: 'dashboard',
@@ -16,6 +18,8 @@ export class DashboardComponent {
   public unitFormGroup: FormGroup;
 
   public products = PRODUCTS;
+
+  private destroy$ = new Subject<boolean>();
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -94,6 +98,43 @@ export class DashboardComponent {
     this.unitFormGroup = this.formBuilder.group({
       units: ['']
     });
+
+    this.setTotalValue();
+  }
+
+  private setTotalValue() {
+    this.secondFormGroup.valueChanges.pipe(takeUntil(this.destroy$)).subscribe(value => {
+      if (value['designerPrincipal_rate'] && value['designerPrincipal_hours']) {
+        const total = +value['designerPrincipal_rate'] * +value['designerPrincipal_hours']
+        this.secondFormGroup.controls['designerPrincipal_total'].setValue(total, { emitEvent: false });
+      }
+
+      if (value['designerSenior_rate'] && value['designerSenior_hours']) {
+        const total = +value['designerSenior_rate'] * +value['designerSenior_hours']
+        this.secondFormGroup.controls['designerSenior_total'].setValue(total, { emitEvent: false });
+      }
+
+      if (value['designer_rate'] && value['designer_hours']) {
+        const total = +value['designer_rate'] * +value['designer_hours']
+        this.secondFormGroup.controls['designer_total'].setValue(total, { emitEvent: false });
+      }
+
+      if (value['designerJunior_rate'] && value['designerJunior_hours']) {
+        const total = +value['designerJunior_rate'] * +value['designerJunior_hours']
+        this.secondFormGroup.controls['designerJunior_total'].setValue(total, { emitEvent: false });
+      }
+
+      if (value['designerStage_rate'] && value['designerStage_hours']) {
+        const total = +value['designerStage_rate'] * +value['designerStage_hours']
+        this.secondFormGroup.controls['designerStage_total'].setValue(total, { emitEvent: false });
+      }
+
+    });
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next(true);
+    this.destroy$.complete();
   }
 
 }
