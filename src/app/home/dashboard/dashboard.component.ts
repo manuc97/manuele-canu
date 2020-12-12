@@ -10,15 +10,18 @@ export class DashboardComponent {
 
   public firstFormGroup: FormGroup;
   public secondFormGroup: FormGroup;
+  public accessoriesFormGroup: FormGroup;
+
   public products = PRODUCTS;
 
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.firstFormGroup = this._formBuilder.group({
+    this.firstFormGroup = this.formBuilder.group({
       product: ['', Validators.required]
     });
-    this.secondFormGroup = this._formBuilder.group({
+
+    this.secondFormGroup = this.formBuilder.group({
       designerPrincipal_rate: [''],
       designerPrincipal_hours: [''],
       designerPrincipal_total: [''],
@@ -38,7 +41,12 @@ export class DashboardComponent {
       designerStage_rate: [''],
       designerStage_hours: [''],
       designerStage_total: [''],
+    });
 
+    this.accessoriesFormGroup = this.formBuilder.group({
+      baseCostForPrototype: [''],
+      accessories: [''],
+      others: ['']
     });
   }
 }

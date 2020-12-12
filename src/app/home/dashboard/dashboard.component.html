@@ -5,7 +5,7 @@
         <form [formGroup]="firstFormGroup">
             <ng-template matStepLabel>Choose a product</ng-template>
             <mat-radio-group
-            class="products"
+                class="products"
                 name="product_name"
                 formControlName="product">
                 <mat-radio-button
@@ -175,6 +175,56 @@
                     matStepperNext>
                     Next
                 </button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="accessoriesFormGroup">
+        <form [formGroup]="accessoriesFormGroup">
+            <ng-template matStepLabel>Choose Prototype</ng-template>
+            <div class="prototype">
+                <div>
+                    <span>Costo prototipia base</span>
+                </div>
+                <div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Price</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="baseCostForPrototype"
+                            class="form-control">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="prototype">
+                <div>
+                    <span>Accessori</span>
+                </div>
+                <div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Price</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="accessories"
+                            class="form-control">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="prototype">
+                <div>
+                    <span>Altro</span>
+                </div>
+                <div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Price</mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            formControlName="others"
+                            class="form-control">
+                    </mat-form-field>
+                </div>
             </div>
         </form>
     </mat-step>
