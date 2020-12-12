@@ -482,7 +482,33 @@
                 </button>
             </div>
         </form>
-
+    </mat-step>
+    <mat-step [stepControl]="unitFormGroup">
+        <form [formGroup]="unitFormGroup">
+            <ng-template matStepLabel>Choose the number of pieces</ng-template>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Units</mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        formControlName="units"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <button
+                    mat-button
+                    matStepperPrevious>
+                    Back
+                </button>
+                <button
+                    mat-button
+                    matStepperNext>
+                    Next
+                </button>
+            </div>
+        </form>
 
     </mat-step>
     <mat-step>

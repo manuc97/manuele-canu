@@ -13,6 +13,7 @@ export class DashboardComponent {
   public accessoriesFormGroup: FormGroup;
   public fabricFormGroup: FormGroup;
   public smallPartsFormGroup: FormGroup;
+  public unitFormGroup: FormGroup;
 
   public products = PRODUCTS;
 
@@ -88,6 +89,10 @@ export class DashboardComponent {
 
       stones_unit:[''],
       stones_price:['']
+    });
+
+    this.unitFormGroup = this.formBuilder.group({
+      units: ['']
     });
   }
 }
