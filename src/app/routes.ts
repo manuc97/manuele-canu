@@ -1,5 +1,6 @@
 export enum MAIN_APP_ROUTES {
-    HOME = 'home'
+    HOME = 'home',
+    THANK_YOU = 'thank-you'
 }
 
 export enum AUTH_ROUTES {

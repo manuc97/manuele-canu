@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { MAIN_APP_ROUTES } from 'app/routes';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { PRODUCTS } from '../configs/products'
@@ -31,7 +33,7 @@ export class DashboardComponent {
 
   private destroy$ = new Subject<boolean>();
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.firstFormGroup = this.formBuilder.group({
@@ -106,7 +108,7 @@ export class DashboardComponent {
     });
 
     this.unitFormGroup = this.formBuilder.group({
-      units: ['']
+      units: ['', Validators.required]
     });
 
     this.setTotalValue();
@@ -117,38 +119,42 @@ export class DashboardComponent {
     this.calculateProtopia();
   }
 
+  public redirect(): void {
+    this.router.navigate([MAIN_APP_ROUTES.THANK_YOU])
+  }
+
   private calculateProtopia(): void {
-    if(this.accessoriesFormGroup.controls['baseCostForPrototype'].value) {
+    if (this.accessoriesFormGroup.controls['baseCostForPrototype'].value) {
       this.total.prototipia = this.total.prototipia + this.accessoriesFormGroup.controls['baseCostForPrototype'].value;
     }
 
-    if(this.accessoriesFormGroup.controls['accessories'].value) {
+    if (this.accessoriesFormGroup.controls['accessories'].value) {
       this.total.prototipia = this.total.prototipia + this.accessoriesFormGroup.controls['accessories'].value;
     }
 
-    if(this.accessoriesFormGroup.controls['others'].value) {
+    if (this.accessoriesFormGroup.controls['others'].value) {
       this.total.prototipia = this.total.prototipia + this.accessoriesFormGroup.controls['others'].value;
     }
   }
 
   private calculateCostoRicerca(): void {
-    if(this.secondFormGroup.controls['designerPrincipal_total'].value) {
+    if (this.secondFormGroup.controls['designerPrincipal_total'].value) {
       this.total.ricerca = this.total.ricerca + this.secondFormGroup.controls['designerPrincipal_total'].value;
     }
 
-    if(this.secondFormGroup.controls['designerSenior_total'].value) {
+    if (this.secondFormGroup.controls['designerSenior_total'].value) {
       this.total.ricerca = this.total.ricerca + this.secondFormGroup.controls['designerSenior_total'].value;
     }
 
-    if(this.secondFormGroup.controls['designer_total'].value) {
+    if (this.secondFormGroup.controls['designer_total'].value) {
       this.total.ricerca = this.total.ricerca + this.secondFormGroup.controls['designer_total'].value;
     }
 
-    if(this.secondFormGroup.controls['designerJunior_total'].value) {
+    if (this.secondFormGroup.controls['designerJunior_total'].value) {
       this.total.ricerca = this.total.ricerca + this.secondFormGroup.controls['designerJunior_total'].value;
     }
 
-    if(this.secondFormGroup.controls['designerStage_total'].value) {
+    if (this.secondFormGroup.controls['designerStage_total'].value) {
       this.total.ricerca = this.total.ricerca + this.secondFormGroup.controls['designerStage_total'].value;
     }
   }

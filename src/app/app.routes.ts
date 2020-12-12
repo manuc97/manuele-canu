@@ -12,6 +12,10 @@ export const APP_ROUTES_CONFIGURATION = [{
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
     canLoad: [AuthGuard]
 }, {
+    path: 'thank-you',
+    loadChildren: () => import('./thank-you/thank-you.module').then(m => m.ThankYouModule),
+    canLoad: [AuthGuard]
+}, {
     path: AUTH_ROUTES.LOGIN,
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
     canLoad: [NoAuthGuard],
