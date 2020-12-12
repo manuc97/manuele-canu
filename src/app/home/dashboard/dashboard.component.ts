@@ -27,23 +27,23 @@ export class DashboardComponent {
     this.secondFormGroup = this.formBuilder.group({
       designerPrincipal_rate: [''],
       designerPrincipal_hours: [''],
-      designerPrincipal_total: [''],
+      designerPrincipal_total: [{ value: '', disabled: true }],
 
       designerSenior_rate: [''],
       designerSenior_hours: [''],
-      designerSenior_total: [''],
+      designerSenior_total: [{ value: '', disabled: true }],
 
       designer_rate: [''],
       designer_hours: [''],
-      designer_total: [''],
+      designer_total: [{ value: '', disabled: true }],
 
       designerJunior_rate: [''],
       designerJunior_hours: [''],
-      designerJunior_total: [''],
+      designerJunior_total: [{ value: '', disabled: true }],
 
       designerStage_rate: [''],
       designerStage_hours: [''],
-      designerStage_total: [''],
+      designerStage_total: [{ value: '', disabled: true }],
     });
 
     this.accessoriesFormGroup = this.formBuilder.group({
@@ -78,21 +78,22 @@ export class DashboardComponent {
     });
 
     this.smallPartsFormGroup = this.formBuilder.group({
-      buttons_unit:[''],
+      buttons_unit: [''],
       buttons_price: [''],
 
-      buckles_unit:[''],
-      buckles_price:[''],
+      buckles_unit: [''],
+      buckles_price: [''],
 
-      zip_unit:[''],
-      zip_price:[''],
+      zip_unit: [''],
+      zip_price: [''],
 
-      stones_unit:[''],
-      stones_price:['']
+      stones_unit: [''],
+      stones_price: ['']
     });
 
     this.unitFormGroup = this.formBuilder.group({
       units: ['']
     });
   }
+
 }
