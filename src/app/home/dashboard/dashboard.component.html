@@ -5,7 +5,7 @@
         <form [formGroup]="firstFormGroup">
             <ng-template matStepLabel>Choose a product</ng-template>
             <mat-radio-group
-            class="products"
+                class="products"
                 name="product_name"
                 formControlName="product">
                 <mat-radio-button
@@ -28,13 +28,13 @@
         <form [formGroup]="secondFormGroup">
             <ng-template matStepLabel>Choose designer</ng-template>
             <div>
-                <div class="designer-field">
+                <div>
                     <div>Designer Principal</div>
                     <mat-form-field appearance="fill">
                         <mat-label>Rate</mat-label>
                         <input
                             matInput
-                            type="text"
+                            type="number"
                             formControlName="designerPrincipal_rate"
                             class="form-control">
                     </mat-form-field>
@@ -42,7 +42,7 @@
                         <mat-label>Hours</mat-label>
                         <input
                             matInput
-                            type="text"
+                            type="number"
                             formControlName="designerPrincipal_hours"
                             class="form-control">
                     </mat-form-field>
@@ -50,18 +50,18 @@
                         <mat-label>Total</mat-label>
                         <input
                             matInput
-                            type="text"
+                            type="number"
                             formControlName="designerPrincipal_total"
                             class="form-control">
                     </mat-form-field>
                 </div>
-                <div class="designer-field">
+                <div>
                     <div>Designer Senior</div>
                     <mat-form-field appearance="fill">
                         <mat-label>Rate</mat-label>
                         <input
                             matInput
-                            type="text"
+                            type="number"
                             formControlName="designerSenior_rate"
                             class="form-control">
                     </mat-form-field>
@@ -69,7 +69,7 @@
                         <mat-label>Hours</mat-label>
                         <input
                             matInput
-                            type="text"
+                            type="number"
                             formControlName="designerSenior_hours"
                             class="form-control">
                     </mat-form-field>
@@ -77,18 +77,18 @@
                         <mat-label>Total</mat-label>
                         <input
                             matInput
-                            type="text"
+                            type="number"
                             formControlName="designerSenior_total"
                             class="form-control">
                     </mat-form-field>
                 </div>
-                <div class="designer-field">
+                <div>
                     <div>Designer</div>
                     <mat-form-field appearance="fill">
                         <mat-label>Rate</mat-label>
                         <input
                             matInput
-                            type="text"
+                            type="number"
                             formControlName="designer_rate"
                             class="form-control">
                     </mat-form-field>
@@ -96,7 +96,7 @@
                         <mat-label>Hours</mat-label>
                         <input
                             matInput
-                            type="text"
+                            type="number"
                             formControlName="designer_hours"
                             class="form-control">
                     </mat-form-field>
@@ -104,18 +104,18 @@
                         <mat-label>Total</mat-label>
                         <input
                             matInput
-                            type="text"
+                            type="number"
                             formControlName="designer_total"
                             class="form-control">
                     </mat-form-field>
                 </div>
-                <div class="designer-field">
+                <div>
                     <div>Designer Junior</div>
                     <mat-form-field appearance="fill">
                         <mat-label>Rate</mat-label>
                         <input
                             matInput
-                            type="text"
+                            type="number"
                             formControlName="designerJunior_rate"
                             class="form-control">
                     </mat-form-field>
@@ -123,7 +123,7 @@
                         <mat-label>Hours</mat-label>
                         <input
                             matInput
-                            type="text"
+                            type="number"
                             formControlName="designerJunior_hours"
                             class="form-control">
                     </mat-form-field>
@@ -131,18 +131,18 @@
                         <mat-label>Total</mat-label>
                         <input
                             matInput
-                            type="text"
+                            type="number"
                             formControlName="designerJunior_total"
                             class="form-control">
                     </mat-form-field>
                 </div>
-                <div class="designer-field">
+                <div>
                     <div>Designer Stage</div>
                     <mat-form-field appearance="fill">
                         <mat-label>Rate</mat-label>
                         <input
                             matInput
-                            type="text"
+                            type="number"
                             formControlName="designerStage_rate"
                             class="form-control">
                     </mat-form-field>
@@ -150,7 +150,7 @@
                         <mat-label>Hours</mat-label>
                         <input
                             matInput
-                            type="text"
+                            type="number"
                             formControlName="designerStage_hours"
                             class="form-control">
                     </mat-form-field>
@@ -158,7 +158,7 @@
                         <mat-label>Total</mat-label>
                         <input
                             matInput
-                            type="text"
+                            type="number"
                             formControlName="designerStage_total"
                             class="form-control">
                     </mat-form-field>
@@ -178,14 +178,355 @@
             </div>
         </form>
     </mat-step>
+    <mat-step [stepControl]="accessoriesFormGroup">
+        <form [formGroup]="accessoriesFormGroup">
+            <ng-template matStepLabel>Choose Prototype</ng-template>
+            <div class="prototype">
+                <div>
+                    <span>Costo prototipia base</span>
+                </div>
+                <div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Price</mat-label>
+                        <input
+                            matInput
+                            type="number"
+                            formControlName="baseCostForPrototype"
+                            class="form-control">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="prototype">
+                <div>
+                    <span>Accessori</span>
+                </div>
+                <div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Price</mat-label>
+                        <input
+                            matInput
+                            type="number"
+                            formControlName="accessories"
+                            class="form-control">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="prototype">
+                <div>
+                    <span>Altro</span>
+                </div>
+                <div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Price</mat-label>
+                        <input
+                            matInput
+                            type="number"
+                            formControlName="others"
+                            class="form-control">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div>
+                <button
+                    mat-button
+                    matStepperPrevious>
+                    Back
+                </button>
+                <button
+                    mat-button
+                    matStepperNext>
+                    Next
+                </button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="fabricFormGroup">
+        <form [formGroup]="fabricFormGroup">
+            <ng-template matStepLabel>Choose fabric items</ng-template>
+            <div>
+                <span>Lana</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>m2 per unit</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="wool_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="wool_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Cashmire</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>m2 per unit</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="cashmire_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="cashmire_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Cotone</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>m2 per unit</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="cotton_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="cotton_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Viscosa</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>m2 per unit</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="viscose_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="viscose_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Ecopelle</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>m2 per unit</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="ecoLeather_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="ecoLeather_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Pelle</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>m2 per unit</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="leather_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="leather_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Pelle Esotica</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>m2 per unit</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="exoticLeather_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="exoticLeather_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <button
+                    mat-button
+                    matStepperPrevious>
+                    Back
+                </button>
+                <button
+                    mat-button
+                    matStepperNext>
+                    Next
+                </button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="smallPartsFormGroup">
+        <form [formGroup]="smallPartsFormGroup">
+            <ng-template matStepLabel>Choose small extra items</ng-template>
+            <div>
+                <span>Bottoni</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>per unit</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="buttons_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="buttons_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Fibbie</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>per unit</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="buckles_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="buckles_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Zip</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>per unit</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="zip_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="zip_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <span>Stress/pietre</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>per unit</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="stones_unit"
+                        class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Base price</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="stones_price"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <button
+                    mat-button
+                    matStepperPrevious>
+                    Back
+                </button>
+                <button
+                    mat-button
+                    matStepperNext>
+                    Next
+                </button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="unitFormGroup">
+        <form [formGroup]="unitFormGroup">
+            <ng-template matStepLabel>Choose the number of pieces</ng-template>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Units</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="units"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div>
+                <button
+                    mat-button
+                    matStepperPrevious>
+                    Back
+                </button>
+                <button
+                    (click)="calculateTotal()"
+                    mat-button
+                    matStepperNext>
+                    Next
+                </button>
+            </div>
+        </form>
+    </mat-step>
     <mat-step>
-        <ng-template matStepLabel>Done</ng-template>
-        <p>You are now done.</p>
+        <ng-template matStepLabel>Total</ng-template>
+        <div>Costo totale {{total.totale}}</div>
+        <div>Costo per pezzo {{total.per_pezzo}}</div>
+        <div>Costo ricerca {{total.ricerca}}</div>
+        <div>Protopia {{total.prototipia}}</div>
+        <div>Costo tessuto a pezzo {{total.tessuto_a_pezzo}}</div>
+        <div>Costo minuteria a pezzo {{total.minuteria_a_pezzo}}</div>
+        <div>Costo manifattura {{total.maniffattura}}</div>
+        <div>Totale tessuto {{total.totale_tessauto}}</div>
+        <div>Totale minuteria {{total.totale_minuteria}}</div>
         <div>
             <button
                 mat-button
-                matStepperPrevious>
-                Back
+                (click)="redirect()">
+                Done
             </button>
             <button
                 mat-button
