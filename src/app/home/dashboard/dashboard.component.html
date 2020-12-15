@@ -162,6 +162,16 @@
                     </mat-form-field>
                 </div>
             </div>
+            <div class="table-row">
+                <div>Total</div>
+                    <mat-form-field appearance="fill">
+                        <input
+                            matInput
+                            type="number"
+                            formControlName="total_designer"
+                            class="form-control">
+                    </mat-form-field>
+            </div>
             <div class="action-container">
                 <button
                     mat-button
@@ -226,6 +236,16 @@
                     <span matPrefix>€&nbsp;</span>
                 </mat-form-field>
             </div>
+            <div class="table-row">
+                <div>Total</div>
+                    <mat-form-field appearance="fill">
+                        <input
+                            matInput
+                            type="number"
+                            formControlName="total_prototype"
+                            class="form-control">
+                    </mat-form-field>
+            </div>
             <div class="action-container">
                 <button
                     mat-button
@@ -251,6 +271,7 @@
                 <div>Material</div>
                 <div>m2 / unit</div>
                 <div>Base price</div>
+                <div>Total</div>
             </div>
             <div class="table-row">
                 <span>Lana</span>
@@ -268,6 +289,13 @@
                         formControlName="wool_price"
                         class="form-control">
                     <span matPrefix>€&nbsp;</span>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="wool_total"
+                        class="form-control">
                 </mat-form-field>
             </div>
             <div class="table-row">
@@ -287,6 +315,13 @@
                         class="form-control">
                     <span matPrefix>€&nbsp;</span>
                 </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="cashmire_total"
+                        class="form-control">
+                </mat-form-field>
             </div>
             <div class="table-row">
                 <span>Cotone</span>
@@ -304,6 +339,13 @@
                         formControlName="cotton_price"
                         class="form-control">
                     <span matPrefix>€&nbsp;</span>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="cotton_total"
+                        class="form-control">
                 </mat-form-field>
             </div>
             <div class="table-row">
@@ -323,6 +365,13 @@
                         class="form-control">
                     <span matPrefix>€&nbsp;</span>
                 </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="viscose_total"
+                        class="form-control">
+                </mat-form-field>
             </div>
             <div class="table-row">
                 <span>Ecopelle</span>
@@ -340,6 +389,13 @@
                         formControlName="ecoLeather_price"
                         class="form-control">
                     <span matPrefix>€&nbsp;</span>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="ecoLeather_total"
+                        class="form-control">
                 </mat-form-field>
             </div>
             <div class="table-row">
@@ -359,6 +415,13 @@
                         class="form-control">
                     <span matPrefix>€&nbsp;</span>
                 </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="leather_total"
+                        class="form-control">
+                </mat-form-field>
             </div>
             <div class="table-row">
                 <span>Pelle Esotica</span>
@@ -377,6 +440,23 @@
                         class="form-control">
                     <span matPrefix>€&nbsp;</span>
                 </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="exoticLeather_total"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div class="table-row">
+                <div>Total</div>
+                    <mat-form-field appearance="fill">
+                        <input
+                            matInput
+                            type="number"
+                            formControlName="total_fabric"
+                            class="form-control">
+                    </mat-form-field>
             </div>
             <div class="action-container">
                 <button
@@ -403,6 +483,7 @@
                 <div>Material</div>
                 <div>Units</div>
                 <div>Base price</div>
+                <div>Total</div>
             </div>
             <div class="table-row">
                 <span>Bottoni</span>
@@ -420,6 +501,13 @@
                         formControlName="buttons_price"
                         class="form-control">
                     <span matPrefix>€&nbsp;</span>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="buttons_total"
+                        class="form-control">
                 </mat-form-field>
             </div>
             <div class="table-row">
@@ -439,6 +527,13 @@
                         class="form-control">
                     <span matPrefix>€&nbsp;</span>
                 </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="buckles_total"
+                        class="form-control">
+                </mat-form-field>
             </div>
             <div class="table-row">
                 <span>Zip</span>
@@ -456,6 +551,13 @@
                         formControlName="zip_price"
                         class="form-control">
                     <span matPrefix>€&nbsp;</span>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="zip_total"
+                        class="form-control">
                 </mat-form-field>
             </div>
             <div class="table-row">
@@ -475,6 +577,23 @@
                         class="form-control">
                     <span matPrefix>€&nbsp;</span>
                 </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="stones_total"
+                        class="form-control">
+                </mat-form-field>
+            </div>
+            <div class="table-row">
+                <div>Total</div>
+                    <mat-form-field appearance="fill">
+                        <input
+                            matInput
+                            type="number"
+                            formControlName="total_parts"
+                            class="form-control">
+                    </mat-form-field>
             </div>
             <div class="action-container">
                 <button
@@ -497,13 +616,25 @@
     <mat-step [stepControl]="unitFormGroup">
         <form [formGroup]="unitFormGroup">
             <ng-template matStepLabel>Choose the number of pieces</ng-template>
-            <div>
+            <div class="table-row header">
+                <div>Units</div>
+                <div>Base price for item</div>
+            </div>
+            <div class="table-row">
                 <mat-form-field appearance="fill">
                     <input
                         matInput
                         type="number"
                         formControlName="units"
                         class="form-control">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="price"
+                        class="form-control">
+                        <span matPrefix>€&nbsp;</span>
                 </mat-form-field>
             </div>
             <div class="action-container">
@@ -534,8 +665,8 @@
         <div>Costo tessuto a pezzo {{total.tessuto_a_pezzo}}</div>
         <div>Costo minuteria a pezzo {{total.minuteria_a_pezzo}}</div>
         <div>Costo manifattura {{total.maniffattura}}</div>
-        <div>Totale tessuto {{total.totale_tessauto}}</div>
-        <div>Totale minuteria {{total.totale_minuteria}}</div>
+        <div>Totale tessuto {{total.totale_tessauto}} m2</div>
+        <div>Totale minuteria {{total.totale_minuteria}} pezzi</div>
         <div class="action-container">
             <button
                 mat-button
