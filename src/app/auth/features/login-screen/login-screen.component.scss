@@ -9,15 +9,18 @@
     background-repeat: no-repeat;
 
     &.slide-0 {
-        background-image: url(https://blog.virginatlantic.com/wp-content/uploads/2012/06/Early-morning-fog-over-the-Golden-Gate-Bridge-%C2%A9-Shutterstock-1500x650.jpg);
+        // background-image: url(https://blog.virginatlantic.com/wp-content/uploads/2012/06/Early-morning-fog-over-the-Golden-Gate-Bridge-%C2%A9-Shutterstock-1500x650.jpg);
+        background-image: url(https://wallpapercave.com/wp/wp3823827.jpg);
     }
 
     &.slide-1 {
-        background-image: url(https://www.kevmrc.com/wp-content/uploads/2016/12/santuario-nacional-de-cristo-rei-lisboa-9.jpg);
+        // background-image: url(https://www.kevmrc.com/wp-content/uploads/2016/12/santuario-nacional-de-cristo-rei-lisboa-9.jpg);
+        background-image: url(https://wallpapersplanet.net/sites/default/files/milan-city-wallpapers-36464-5607322.png);
     }
 
     &.slide-2 {
-        background-image: url(https://www.traveler.ro/wp-content/uploads/2020/11/Ce-trebuie-sa-stiti-despre-Singapore.jpg);
+        // background-image: url(https://www.traveler.ro/wp-content/uploads/2020/11/Ce-trebuie-sa-stiti-despre-Singapore.jpg);
+        background-image: url(https://images.wallpaperscraft.com/image/milan_italy_river_evening_city_118685_3840x2400.jpg);
     }
 
     .centered-panel {
@@ -27,7 +30,8 @@
         max-width: 550px;
         width: 100%;
         height: 100%;
-        background: #424242;
+        // background: #424242;
+        background: #010101;
         box-shadow: 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
         box-sizing: border-box;
 
@@ -103,7 +107,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active  {
     -webkit-text-fill-color: #fff !important;
-    -webkit-box-shadow: 0 0 0 1000px #424242 inset !important;
+    -webkit-box-shadow: 0 0 0 1000px #010101 inset !important;
 }
 
 ::ng-deep {
